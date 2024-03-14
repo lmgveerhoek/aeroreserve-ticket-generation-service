@@ -1,7 +1,7 @@
 {
-  "name": "hello_world",
+  "name": "ticket_generation_service",
   "version": "1.0.0",
-  "description": "hello world sample for NodeJS",
+  "description": "An AWS Lambda function that generates tickets for a given event",
   "main": "app.js",
   "repository": "https://github.com/awslabs/aws-sam-cli/tree/develop/samcli/local/init/templates/cookiecutter-aws-sam-hello-nodejs",
   "author": "SAM CLI",

@@ -10,15 +10,23 @@
  * @returns {Object} object - API Gateway Lambda Proxy Output Format
  * 
  */
+import { v4 as uuidv4 } from 'uuid';
 
 export const lambdaHandler = async (event, context) => {
-    const response = {
-      statusCode: 200,
-      body: JSON.stringify({
-        message: 'hello world',
-      })
-    };
+  // Generate a unique ticket ID for each request
+  const ticketId = uuidv4();
 
-    return response;
+  // Construct the response object with the generated ticket ID
+  const response = {
+      statusCode: 200,
+      headers: {
+          "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+          ticketId: ticketId
+      })
   };
+
+  return response;
+};
   
