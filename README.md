@@ -2,9 +2,9 @@
 
 This project contains source code and supporting files for a serverless application that you can deploy with the SAM CLI. It includes the following files and folders.
 
-- aeroreserve-ticket-generation-service - Code for the application's Lambda function.
+- lambda-function - Code for the application's Lambda function.
 - events - Invocation events that you can use to invoke the function.
-- aeroreserve-ticket-generation-service/tests - Unit tests for the application code. 
+- lambda-function/tests - Unit tests for the application code. 
 - template.yaml - A template that defines the application's AWS resources.
 
 The application uses several AWS resources, including Lambda functions and an API Gateway API. These resources are defined in the `template.yaml` file in this project. You can update the template to add AWS resources through the same deployment process that updates your application code.
@@ -59,7 +59,7 @@ Build your application with the `sam build` command.
 aeroreserve-ticket-generation-service$ sam build
 ```
 
-The SAM CLI installs dependencies defined in `aeroreserve-ticket-generation-service/package.json`, creates a deployment package, and saves it in the `.aws-sam/build` folder.
+The SAM CLI installs dependencies defined in `lambda-function/package.json`, creates a deployment package, and saves it in the `.aws-sam/build` folder.
 
 Test a single function by invoking it directly with a test event. An event is a JSON document that represents the input that the function receives from the event source. Test events are included in the `events` folder in this project.
 
@@ -104,10 +104,10 @@ You can find more information and examples about filtering Lambda function logs 
 
 ## Unit tests
 
-Tests are defined in the `aeroreserve-ticket-generation-service/tests` folder in this project. Use NPM to install the [Mocha test framework](https://mochajs.org/) and run unit tests.
+Tests are defined in the `lambda-function/tests` folder in this project. Use NPM to install the [Mocha test framework](https://mochajs.org/) and run unit tests.
 
 ```bash
-aeroreserve-ticket-generation-service$ cd aeroreserve-ticket-generation-service
+aeroreserve-ticket-generation-service$ cd lambda-function
 aeroreserve-ticket-generation-service$ npm install
 aeroreserve-ticket-generation-service$ npm run test
 ```
