@@ -3,7 +3,7 @@ Transform: AWS::Serverless-2016-10-31
 Description: >
   aeroreserve-ticket-generation-service
 
-  Sample SAM Template for aeroreserve-ticket-generation-service
+  SAM Template for aeroreserve-ticket-generation-service
 
 # More info about Globals: https://github.com/awslabs/serverless-application-model/blob/master/docs/globals.rst
 Globals:
